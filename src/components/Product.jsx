@@ -1,23 +1,24 @@
 import React from 'react';
 
-function Product({prod,onAdd,inCart}) {
+function Product({product,onAdd,inCart}) {
   return  (  
     <div className="card">
-            <div class="card-header" style="padding:0">
-                <img className='card-img-top'  src ={prod.image} style="height:300px;width: auto;" />   
+     
+            <div className="card-header" >
+                 <img className='card-img-top'  src ={product.image}   /> 
             </div>
-            <div class="card-body">
-                <div class="tag tag-teal"> {prod.category}    </div>  
+            <div className="card-body">
+                <div className="tag tag-teal"> {product.category}    </div>  
                 
-                <h4 name = "naslovKartice">  {prod.name}   </h4>
-                
-
-                <p style="font-size:20px;text-decoration:  line-through;margin:0">  {prod.price}  </p>   
-                <p style="font-size:20px;"> <strong>  Cena:      </strong>  {prod.price}*0.9 </p>
+                <h4 className = "naslovKartice">  {product.name}   </h4>
                 
                 
-                <button type="button" class="btn btn-custom"  style="background-color:#47bcd4;"     >  <i class="fas fa-pencil-alt"></i> </button> 
-                <button type="button" class="btn btn-custom"  style="background-color:#a18cd1;"   ><i class="fas fa-trash" ></i></button>  
+                {/* <p style="font-size:20px;text-decoration:  line-through;margin:0">  {product.price}  </p>   
+                <p style="font-size:20px;"> <strong>  Cena:      </strong>  {product.price}*0.9 </p> */}
+                
+                <p >  {product.price}  </p>   
+                <p  > <strong>  Cena:      </strong>  {product.price*0.9} </p>
+              
 
                 
             </div> 

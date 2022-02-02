@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+ 
 import './App.css';
+import Products from './components/Products';
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";\
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
       category: "AA"
     },
     {
-      id: 1,
+      id: 2,
       image:"https://www.delfi.rs/_img/artikli/2016/04/gordost_i_predrasuda_vv.jpg",
       name: "Gordost i predrasuda",
       
@@ -29,7 +30,7 @@ function App() {
       category: "AA"
     },
     {
-      id: 1,
+      id: 3,
       image:"https://www.delfi.rs/_img/artikli/2016/04/gordost_i_predrasuda_vv.jpg",
       name: "Gordost i predrasuda",
       
@@ -40,7 +41,7 @@ function App() {
       category: "AA"
     },
     {
-      id: 1,
+      id: 4,
       image:"https://www.delfi.rs/_img/artikli/2016/04/gordost_i_predrasuda_vv.jpg",
       name: "Gordost i predrasuda",
       
@@ -51,7 +52,7 @@ function App() {
       category: "AA"
     },
     {
-      id: 1,
+      id: 5,
       image:"https://www.delfi.rs/_img/artikli/2016/04/gordost_i_predrasuda_vv.jpg",
       name: "Gordost i predrasuda",
       
@@ -69,7 +70,8 @@ function App() {
     <Routes>
       <Route
         path="/"
-        element={<Products products={products} onAdd={addProduct} />}
+        element={<Products products={products}   />}
+        // element={<Products products={products} onAdd={addProduct} />}
       />
       {/* <Route path="/korpa" element={<Cart books={cartBooks} />} /> */}
     </Routes>
