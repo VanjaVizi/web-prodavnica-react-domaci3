@@ -12,12 +12,10 @@ function Product({product,onAdd,inCart}) {
                 
                 <h4 className = "naslovKartice">  {product.name}   </h4>
                 
+    
                 
-                {/* <p style="font-size:20px;text-decoration:  line-through;margin:0">  {product.price}  </p>   
-                <p style="font-size:20px;"> <strong>  Cena:      </strong>  {product.price}*0.9 </p> */}
-                
-                <p >  {product.price}  </p>   
-                <p  > <strong>  Cena:      </strong>  {product.price*0.9} </p>
+                <p className='cenaRegularna'>  {product.price}  </p>   
+                <p className='cenaPopust' > <strong>  Cena:      </strong>  {product.price*0.9} </p>
               
 
                 
