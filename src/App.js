@@ -1,11 +1,13 @@
  
 import './App.css';
 import Products from './components/Products';
+import NavBar from "./components/Navbar";
+import { BsCartFill } from "react-icons/bs";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-
+  const [cartNum, setCartNum] = useState(0); 
   const [products] = useState([
     {
       id: 1,
@@ -13,7 +15,7 @@ function App() {
       name: "Lizalica",
       
       description:
-        "Elizabeta je neposredna i oštroumna mlada dama koja se ne pokorava opšteprihvaćenim pravilima lijepog ponašanja, već sluša glas svoga srca i svoje savjesti. ",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
       price:600,
       amount: 0,
       category: "lizalica"
@@ -23,7 +25,7 @@ function App() {
       image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ55J1g26iCVmkbTn7MhsmLTK9ava4aP-EyZw&usqp=CAU",
       name: "Cokoladna torta", 
       description:
-        "Elizabeta je neposredna i oštroumna mlada dama koja se ne pokorava opšteprihvaćenim pravilima lijepog ponašanja, već sluša glas svoga srca i svoje savjesti. ",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
       price:600,
       amount: 0,
       category: "torta"
@@ -34,7 +36,7 @@ function App() {
       name: "Gumene bombone u raznim oblicima",
       
       description:
-        "Elizabeta je neposredna i oštroumna mlada dama koja se ne pokorava opšteprihvaćenim pravilima lijepog ponašanja, već sluša glas svoga srca i svoje savjesti. ",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
       price:600,
       amount: 0,
       category: "bombone"
@@ -45,7 +47,7 @@ function App() {
       name: "Gumene bombone lubenica",
       
       description:
-        "Elizabeta je neposredna i oštroumna mlada dama koja se ne pokorava opšteprihvaćenim pravilima lijepog ponašanja, već sluša glas svoga srca i svoje savjesti. ",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
       price:600,
       amount: 0,
       category: "bombone"
@@ -56,7 +58,7 @@ function App() {
       name: "Ljubicasti sladoled",
       
       description:
-        "Elizabeta je neposredna i oštroumna mlada dama koja se ne pokorava opšteprihvaćenim pravilima lijepog ponašanja, već sluša glas svoga srca i svoje savjesti. ",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
       price:600,
       amount: 0,
       category: "sladoled"
@@ -66,7 +68,7 @@ function App() {
       name: "Lizalica",
       
       description:
-        "Elizabeta je neposredna i oštroumna mlada dama koja se ne pokorava opšteprihvaćenim pravilima lijepog ponašanja, već sluša glas svoga srca i svoje savjesti. ",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
       price:600,
       amount: 0,
       category: "lizalica"
@@ -76,7 +78,7 @@ function App() {
       image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ55J1g26iCVmkbTn7MhsmLTK9ava4aP-EyZw&usqp=CAU",
       name: "Cokoladna torta", 
       description:
-        "Elizabeta je neposredna i oštroumna mlada dama koja se ne pokorava opšteprihvaćenim pravilima lijepog ponašanja, već sluša glas svoga srca i svoje savjesti. ",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
       price:600,
       amount: 0,
       category: "torta"
@@ -87,7 +89,7 @@ function App() {
       name: "Gumene bombone u raznim oblicima",
       
       description:
-        "Elizabeta je neposredna i oštroumna mlada dama koja se ne pokorava opšteprihvaćenim pravilima lijepog ponašanja, već sluša glas svoga srca i svoje savjesti. ",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
       price:600,
       amount: 0,
       category: "bombone"
@@ -98,7 +100,7 @@ function App() {
       name: "Gumene bombone lubenica",
       
       description:
-        "Elizabeta je neposredna i oštroumna mlada dama koja se ne pokorava opšteprihvaćenim pravilima lijepog ponašanja, već sluša glas svoga srca i svoje savjesti. ",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
       price:600,
       amount: 0,
       category: "bombone"
@@ -109,7 +111,7 @@ function App() {
       name: "Ljubicasti sladoled",
       
       description:
-        "Elizabeta je neposredna i oštroumna mlada dama koja se ne pokorava opšteprihvaćenim pravilima lijepog ponašanja, već sluša glas svoga srca i svoje savjesti. ",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
       price:600,
       amount: 0,
       category: "sladoled"
@@ -118,7 +120,7 @@ function App() {
 
   return (
     <BrowserRouter className="App">
-    {/* <NavBar cartNum={cartNum}></NavBar> */}
+    <NavBar cartNum={cartNum}></NavBar>
     <Routes>
       <Route
         path="/"

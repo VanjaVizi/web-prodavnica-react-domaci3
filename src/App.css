@@ -1,5 +1,5 @@
 /* za kartice*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -28,14 +28,21 @@ body{
   align-items: flex-start;
   padding: 20px;
   min-height: 250px;
+  
+}
+.naslovKartice{
+  font-size:25px;
+}
+.opisProizvoda{
+  font-size:25px;
 }
 .cenaRegularna{
-  font-size:20px;
+  font-size:250px;
   text-decoration:  
   line-through;margin:0
 }
 .cenaPopust{
-  font-size:20px;
+  font-size:25px;
 }
 .tag {
  
@@ -78,4 +85,18 @@ body{
   margin-top: 50px;
 
   
+}
+
+
+/*za dugmice sa ikonicama*/
+.btn {
+  background-color: #5e76bf;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 3px;
+  border-radius: 3px;
+  border-width: 0px;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {BsPlusLg, BsDashLg} from "react-icons/bs"
 function Product({product,onAdd,inCart}) {
   return  (  
     <div className="card">
@@ -11,13 +11,21 @@ function Product({product,onAdd,inCart}) {
                 <div className="tag tag-teal"> {product.category}    </div>  
                 
                 <h4 className = "naslovKartice">  {product.name}   </h4>
-                
+                <p className="opisProizvoda">{product.description}</p>
     
                 
                 <p className='cenaRegularna'>  {product.price}  </p>   
                 <p className='cenaPopust' > <strong>  Cena:      </strong>  {product.price*0.9} </p>
               
-
+                <button
+                className="btn"
+               // onClick={() => onAdd(book.title, book.id)}
+              >
+                <BsPlusLg />
+              </button>
+              <button className="btn">
+                <BsDashLg />
+              </button>
                 
             </div> 
         </div>
