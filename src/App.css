@@ -1,3 +1,4 @@
+/* za kartice*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   box-sizing: border-box;
@@ -5,21 +6,8 @@
 body{
     margin: 0;
 }
-.katalog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
  
-  font-family: "Roboto", sans-serif;
-  color: #10182f;
-}
-.container {
-  display: flex;
-  width: 1040px;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
+ 
 .card {
   margin: 10px;
   background-color: #fff;
@@ -73,4 +61,21 @@ body{
   font-size: 13px;
   margin: 0 0 40px;
 }
+.card-img-top{
+  height:300px;
+  width: auto;
+} 
+
+
+/*za div u kom se nalaze sve kartice*/
+.all-products{
  
+   
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:9%;
+  margin-top: 50px;
+
+  
+}
