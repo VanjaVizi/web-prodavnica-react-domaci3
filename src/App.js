@@ -1,11 +1,13 @@
  
-import './App.css';
+
 import Products from './components/Products';
 import NavBar from "./components/Navbar";
 import { BsCartFill } from "react-icons/bs";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import Footer from './components/Footer';
+ 
+import './App.css';
 function App() {
   const [cartNum, setCartNum] = useState(0); 
   const [products] = useState([
@@ -120,15 +122,16 @@ function App() {
 
   return (
     <BrowserRouter className="App">
-    <NavBar cartNum={cartNum}></NavBar>
-    <Routes>
-      <Route
-        path="/"
-        element={<Products products={products}   />}
-        // element={<Products products={products} onAdd={addProduct} />}
-      />
-      {/* <Route path="/korpa" element={<Cart books={cartBooks} />} /> */}
-    </Routes>
+      <NavBar cartNum={cartNum}></NavBar>
+      <Routes>
+        <Route
+          path="/"
+          element={<Products products={products}   />}
+          // element={<Products products={products} onAdd={addProduct} />}
+        />
+        {/* <Route path="/korpa" element={<Cart books={cartBooks} />} /> */}
+      </Routes>
+      <Footer></Footer>
   </BrowserRouter>
   );
 }

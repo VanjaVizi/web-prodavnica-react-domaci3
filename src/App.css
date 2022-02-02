@@ -125,3 +125,84 @@ body{
   border-width: 0px;
 }
 
+
+
+/*za futer*/
+.footer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: #5e76bf;
+  padding: 10px;
+  
+}
+
+.footer > div {
+  background-color: #5e76bf;
+  color:#fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 15px;
+  text-align: center;
+}
+.footer ul{
+  list-style-type: none;
+}
+.footer a{
+  text-decoration: none;
+  color:white;
+
+}
+.footer a:hover{
+  color:#bb383c;
+
+}
+
+
+/*Ovo su one ikone za drustvene mreze(to je sve ovo sa klasom .fa)*/
+.footer .fa{
+  font-size:30px; 
+}
+
+.fa {
+  padding: 10px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+
+@media (max-width: 800px) {
+  
+
+  /*Responzivnost za futer*/
+ 
+  /*pogledaj kako su podeseni divovi u futeru, stoje svi u jednom redu, 3 kolone(3 diva)*/
+  .footer > div { /*kada smanjimo prozor na manje od 800px svi divovi u futeru treba da se pretvore u kolonu koja ce biti siroka 3 kolone(zbog span=3)*/
+    grid-column: span 3;
+  }
+
+  
+  
+  
+}
