@@ -18,9 +18,9 @@ function Product({product,onAdd,inCart}) {
                 <p className='cenaPopust' > <strong>  Cena:      </strong>  {product.price*0.9} </p>
               
                 <button
-                className="btn"
-               // onClick={() => onAdd(book.title, book.id)}
-              >
+                  className="btn"
+                  onClick={() => onAdd(product.name, product.id)}
+                >
                 <BsPlusLg />
               </button>
               <button className="btn">

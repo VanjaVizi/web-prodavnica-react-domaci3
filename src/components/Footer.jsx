@@ -3,15 +3,15 @@ import {FaFacebookSquare} from "react-router-dom";
  
 function Footer( ) {
     return (
-        <div class="footer">
-        <div class="footerItem">
+        <div className="footer">
+        <div className="footerItem">
             <ul>
                <strong>Kontaktirajte nas</strong>  
                 <li>+381 11 123 456</li>
                 <li>slatkisi@gmail.com</li>
             </ul>
         </div>
-        <div class="footerItem">
+        <div className="footerItem">
             <ul>
                <strong>Mozete nas pronaci na sledecim lokacijama</strong>  
                 <li>Bulevar Mihajla Pupina 74a, Novi Beograd</li>
@@ -20,7 +20,7 @@ function Footer( ) {
 
             </ul>
         </div>
-        <div class="footerItem">
+        <div className="footerItem">
             <ul>
                 <strong>Developed by:</strong> 
               

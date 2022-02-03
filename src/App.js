@@ -6,10 +6,12 @@ import { BsCartFill } from "react-icons/bs";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from './components/Footer';
+import Cart from './components/Cart';
  
 import './App.css';
 function App() {
   const [cartNum, setCartNum] = useState(0); 
+  const [cartProducts, setCartProducts] = useState([]);
   const [products] = useState([
     {
       id: 1,
@@ -119,6 +121,23 @@ function App() {
       category: "sladoled"
     },
   ]);
+  function refreshCart() {
+    let u_korpi = products.filter((p) => p.amount > 0);
+    setCartProducts (u_korpi);
+  }
+  function addProduct(name, id) {
+    alert(name);
+    setCartNum(cartNum + 1);
+    products.forEach((p) => {
+      if (p.id === id) {
+        p.amount++;
+      }
+    });
+    refreshCart();
+
+  }
+ 
+
 
   return (
     <BrowserRouter className="App">
@@ -126,10 +145,9 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Products products={products}   />}
-          // element={<Products products={products} onAdd={addProduct} />}
+          element={<Products products={products} onAdd={addProduct} />}
         />
-        {/* <Route path="/korpa" element={<Cart books={cartBooks} />} /> */}
+         <Route path="/korpa" element={<Cart products={cartProducts} />} />
       </Routes>
       <Footer></Footer>
   </BrowserRouter>

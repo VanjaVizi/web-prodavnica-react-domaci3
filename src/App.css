@@ -125,7 +125,10 @@ body{
   border-width: 0px;
 }
 
+.btn:hover{
+  background-color: #5ebfaa;
 
+}
 
 /*za futer*/
 .footer {
