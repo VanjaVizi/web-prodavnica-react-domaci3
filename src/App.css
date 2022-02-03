@@ -217,3 +217,9 @@ body{
 .caption{
   text-align: center;
 }
+
+
+/*za dugmice za sortiranje*/
+.buttons{
+  margin-left:15%;
+}
