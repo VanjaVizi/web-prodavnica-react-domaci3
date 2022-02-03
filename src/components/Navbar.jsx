@@ -12,8 +12,11 @@ function NavBar({ cartNum }) {
         <p>Korpa</p>
          
       </Link>
+
       <BsCartFill />
         <p className="cart-num">{cartNum}</p>
+
+        <Link to="/kontakt" className="navbar-items"> Kontakt </Link>
     </div>
   );
 }

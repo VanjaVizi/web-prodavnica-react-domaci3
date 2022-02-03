@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Cart from './components/Cart';
  
 import './App.css';
+import Kontakt from './components/Kontakt';
 function App() {
   const [cartNum, setCartNum] = useState(0); 
   const [cartProducts, setCartProducts] = useState([]);
@@ -29,7 +30,7 @@ function App() {
       name: "Cokoladna torta sa lesnicima", 
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-      price:1999,
+      price: 2000,
       amount: 0,
       category: "torta"
     },
@@ -157,6 +158,7 @@ function App() {
           element={<Products products={products} onAdd={addProduct} onRemove ={removeProduct} />}
         />
          <Route path="/korpa" element={<Cart products={cartProducts}  onAdd={addProduct} onRemove ={removeProduct} />} />
+         <Route path="/kontakt" element={<Kontakt></Kontakt>} />
       </Routes>
       <Footer></Footer>
   </BrowserRouter>
