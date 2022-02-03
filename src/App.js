@@ -126,7 +126,7 @@ function App() {
     setCartProducts (u_korpi);
   }
   function addProduct(name, id) {
-    alert(name);
+    
     setCartNum(cartNum + 1);
     products.forEach((p) => {
       if (p.id === id) {
@@ -137,7 +137,17 @@ function App() {
 
   }
  
+  function removeProduct(name, id) {
+    
+    setCartNum(cartNum - 1);
+    products.forEach((p) => {
+      if (p.id === id) {
+        p.amount--; 
+      }
+    });
+    refreshCart();
 
+  }
 
   return (
     <BrowserRouter className="App">
@@ -145,7 +155,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Products products={products} onAdd={addProduct} />}
+          element={<Products products={products} onAdd={addProduct} onRemove ={removeProduct} />}
         />
          <Route path="/korpa" element={<Cart products={cartProducts} />} />
       </Routes>

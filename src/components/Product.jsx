@@ -1,6 +1,6 @@
 import React from 'react';
 import {BsPlusLg, BsDashLg} from "react-icons/bs"
-function Product({product,onAdd,inCart}) {
+function Product({product,onAdd,onRemove}) {
   return  (  
     <div className="card">
      
@@ -23,7 +23,9 @@ function Product({product,onAdd,inCart}) {
                 >
                 <BsPlusLg />
               </button>
-              <button className="btn">
+              <button 
+                className="btn"
+                onClick={() => onRemove(product.name, product.id)}>
                 <BsDashLg />
               </button>
                 
