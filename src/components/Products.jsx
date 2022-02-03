@@ -5,6 +5,8 @@ const Products = ({ products, onAdd,onRemove }) => {
 
   return (
     <div>
+      <h2 className="caption">Naša ponuda</h2>
+
         <div className="all-products">
             {products.map((p) => (
   

@@ -16,7 +16,7 @@ function Product({product,onAdd,onRemove}) {
                 
                 <p className='cenaRegularna'>  {product.price}  </p>   
                 <p className='cenaPopust' > <strong>  Cena:      </strong>  {product.price*0.9} </p>
-              
+                <h3 className="amount">Kolicina:  {product.amount}</h3>
                 <button
                   className="btn"
                   onClick={() => onAdd(product.name, product.id)}

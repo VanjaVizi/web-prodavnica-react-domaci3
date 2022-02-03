@@ -157,7 +157,7 @@ function App() {
           path="/"
           element={<Products products={products} onAdd={addProduct} onRemove ={removeProduct} />}
         />
-         <Route path="/korpa" element={<Cart products={cartProducts} />} />
+         <Route path="/korpa" element={<Cart products={cartProducts}  onAdd={addProduct} onRemove ={removeProduct} />} />
       </Routes>
       <Footer></Footer>
   </BrowserRouter>
